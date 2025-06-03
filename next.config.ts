@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   
   output: 'export',
-  basePath: '/porfolio3d',
+  basePath: process.env.NODE_ENV === 'production' ? '/porfolio3d' : '',
   trailingSlash: true,
 
 };

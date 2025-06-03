@@ -1,49 +1,9 @@
 import { experienceData } from '@/data/experience'
-import { skillsData } from '@/data/skills'
 import { IconMapPin } from '@tabler/icons-react'
-import { AnimatePresence, motion } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { motion } from 'framer-motion'
 
 export default function AboutMe() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [highlightStyle, setHighlightStyle] = useState<{
-    left: number
-    top: number
-    width: number
-    height: number
-  }>({
-    left: 0,
-    top: 0,
-    width: 0,
-    height: 0,
-  })
 
-  // refs for each pill
-  const pillRefs = useRef<(HTMLSpanElement | null)[]>([])
-
-  useEffect(() => {
-    if (
-      hoveredIndex !== null &&
-      pillRefs.current[hoveredIndex] &&
-      containerRef.current
-    ) {
-      const pill = pillRefs.current[hoveredIndex]
-      const container = containerRef.current
-      if (pill && container) {
-        const pillRect = pill.getBoundingClientRect()
-        const containerRect = container.getBoundingClientRect()
-        setHighlightStyle({
-          left: pillRect.left - containerRect.left,
-          top: pillRect.top - containerRect.top,
-          width: pillRect.width,
-          height: pillRect.height,
-        })
-      }
-    } else {
-      setHighlightStyle({ left: 0, top: 0, width: 0, height: 0 })
-    }
-  }, [hoveredIndex])
   return (
     <section id='about' className='relative bg-black z-10 grid place-items-center min-h-screen'>
 

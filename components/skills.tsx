@@ -1,12 +1,11 @@
-import { experienceData } from '@/data/experience'
+/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
+
 import { skillsData } from '@/data/skills'
-import { IconMapPin } from '@tabler/icons-react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 
-type Props = {}
 
-const Skills = (props: Props) => {
+const Skills = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const [highlightStyle, setHighlightStyle] = useState<{

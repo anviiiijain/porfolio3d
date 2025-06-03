@@ -2,9 +2,8 @@ import { motion } from 'framer-motion'
 import { ArrowRight, FileDown } from 'lucide-react'
 import Link from 'next/link'
 
-type Props = {}
 
-const Hero = (props: Props) => {
+const Hero = () => {
   const handleDownload = () => {
     // Specify the path to your resume file
     const resumeURL = './Anvi_Jain_Sr_Software_Engineer.pdf'
@@ -50,7 +49,7 @@ const Hero = (props: Props) => {
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             <p className='w-full px-4 text-base leading-6 sm:max-w-2xl md:text-xl md:leading-8 md:max-w-3xl'>
-              Hi, I'm Anvi Jain, a Full Stack Developer passionate about
+              Hi, I&apos;m Anvi Jain, a Full Stack Developer passionate about
               building performant, user-friendly, and scalable applications.
             </p>
           </motion.div>
@@ -66,7 +65,7 @@ const Hero = (props: Props) => {
               href='#contact'
               className='group flex items-center gap-2 rounded-full bg-gray-800 px-6 py-3 text-white transition-all hover:bg-gray-700'
             >
-              Let's Connect
+              Let&apos;s Connect
               <span className='flex h-6 w-6 items-center justify-center rounded-full bg-white text-black transition-transform group-hover:translate-x-1'>
                 <ArrowRight className='h-3.5 w-3.5' />
               </span>

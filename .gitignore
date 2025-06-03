@@ -9,6 +9,7 @@ build/
 .env
 .env.local
 
+.next
 # Log files
 *.log
 

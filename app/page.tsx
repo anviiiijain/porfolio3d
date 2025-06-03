@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
+
 'use client'
 import AboutMe from '@/components/about'
 import ContactSection from '@/components/contact'
