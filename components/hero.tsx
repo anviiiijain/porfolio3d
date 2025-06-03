@@ -2,11 +2,14 @@ import { motion } from 'framer-motion'
 import { ArrowRight, FileDown } from 'lucide-react'
 import Link from 'next/link'
 
+import getConfig from 'next/config';
+
+const { basePath } = getConfig() || '';
 
 const Hero = () => {
   const handleDownload = () => {
     // Specify the path to your resume file
-    const resumeURL = './Anvi_Jain_Sr_Software_Engineer.pdf'
+    const resumeURL = `${basePath}/Anvi_Jain_Sr_Software_Engineer.pdf`;
     // Create a temporary anchor element to trigger the download
     const anchor = document.createElement('a')
     anchor.href = resumeURL
